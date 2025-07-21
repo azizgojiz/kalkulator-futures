@@ -17,9 +17,9 @@ def risk_based_futures_calculator(entry_price, target_price, stoploss_price, mar
         return {"error": "Tipe posisi salah. Gunakan 'long' atau 'short'."}
 
     return {
-        "Maksimal Profit jika TP tercapai": round(profit, 2),
+        "Profit jika TP tercapai": round(profit, 2),
         "Kerugian jika SL tercapai": round(max_loss, 2),
-        "Leverage yang dihitung": round(leverage, 2),
+        "Leverage": round(leverage, 2),
         "Jumlah koin": round(coin_amount, 2),
         "Ukuran posisi (USD)": round(position_size, 2)
     }
@@ -31,8 +31,8 @@ st.title("📈 Kalkulator Risiko Trading Futures")
 with st.form("futures_form"):
     position_type = st.selectbox("Pilih posisi", ["long", "short"])
     entry_price = st.number_input("Harga Entry", value=0.01385, format="%.8f")
-    target_price = st.number_input("Harga Target (TP)", value=0.0162, format="%.8f")
-    stoploss_price = st.number_input("Harga Stop Loss (SL)", value=0.013385, format="%.8f")
+    target_price = st.number_input("Target (TP)", value=0.0162, format="%.8f")
+    stoploss_price = st.number_input("Stop Loss (SL)", value=0.013385, format="%.8f")
     margin = st.number_input("Margin (USD)", value=30.0)
     max_loss = st.number_input("Toleransi Kerugian Maksimum (USD)", value=6.2)
 

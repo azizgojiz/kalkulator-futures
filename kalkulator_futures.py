@@ -19,7 +19,7 @@ def risk_based_futures_calculator(entry_price, target_price, stoploss_price, mar
     return {
         "Profit jika TP tercapai": round(profit, 2),
         "Kerugian jika SL tercapai": round(max_loss, 2),
-        "Leverage": round(leverage, 2),
+        "Leverage (x)": f"{round(leverage, 2)}x",
         "Jumlah koin": round(coin_amount, 2),
         "Ukuran posisi (USD)": round(position_size, 2)
     }

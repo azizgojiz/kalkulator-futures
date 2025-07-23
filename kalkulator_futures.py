@@ -26,7 +26,7 @@ def risk_based_futures_calculator(entry_price, target_price, stoploss_price, mar
 
 # ===============================
 # Streamlit UI
-st.title("📈 Kalkulator Futures (Leverage) ")
+st.title("📈 Kalkulator Leverage ")
 
 with st.form("futures_form"):
     position_type = st.selectbox("Pilih posisi", ["long", "short"])
